@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20191027 16:24:26.603" rpa="false">
+<suite id="s1" name="Robot Workshop Day1" source="C:\Users\now.see\eclipse-workspace\Robot_Workshop_Day1">
+<suite id="s1-s1" name="Demo Variable" source="C:\Users\now.see\eclipse-workspace\Robot_Workshop_Day1\Demo_Variable.robot">
+<test id="s1-s1-t1" name="Demo Scalar">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>มะนาว</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20191027 16:24:26.676" level="INFO">${username} = มะนาว</msg>
+<status status="PASS" starttime="20191027 16:24:26.676" endtime="20191027 16:24:26.676"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Deo</arg>
+</arguments>
+<assign>
+<var>${surname}</var>
+</assign>
+<msg timestamp="20191027 16:24:26.677" level="INFO">${surname} = Deo</msg>
+<status status="PASS" starttime="20191027 16:24:26.677" endtime="20191027 16:24:26.677"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Hello ${username} and ${surname}</arg>
+</arguments>
+<msg timestamp="20191027 16:24:26.678" level="INFO">Hello มะนาว and Deo</msg>
+<status status="PASS" starttime="20191027 16:24:26.678" endtime="20191027 16:24:26.678"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Hi ${username}</arg>
+</arguments>
+<msg timestamp="20191027 16:24:26.679" level="INFO">Hi มะนาว</msg>
+<status status="PASS" starttime="20191027 16:24:26.679" endtime="20191027 16:24:26.679"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Mr 3</arg>
+</arguments>
+<assign>
+<var>${nickname}</var>
+</assign>
+<msg timestamp="20191027 16:24:26.680" level="INFO">${nickname} = Mr 3</msg>
+<status status="PASS" starttime="20191027 16:24:26.680" endtime="20191027 16:24:26.680"></status>
+</kw>
+<doc>This test case for demo scalar
+Try to set test variable</doc>
+<status status="PASS" starttime="20191027 16:24:26.675" endtime="20191027 16:24:26.680" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Demo List">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>Iphone11</arg>
+<arg>Android 12</arg>
+<arg>Window phone</arg>
+</arguments>
+<assign>
+<var>@{product name}</var>
+</assign>
+<msg timestamp="20191027 16:24:26.683" level="INFO">@{product name} = [ Iphone11 | Android 12 | Window phone ]</msg>
+<status status="PASS" starttime="20191027 16:24:26.683" endtime="20191027 16:24:26.683"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>@{product name}</arg>
+</arguments>
+<msg timestamp="20191027 16:24:26.684" level="INFO">Iphone11</msg>
+<msg timestamp="20191027 16:24:26.684" level="INFO">Android 12</msg>
+<msg timestamp="20191027 16:24:26.684" level="INFO">Window phone</msg>
+<status status="PASS" starttime="20191027 16:24:26.684" endtime="20191027 16:24:26.684"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${product name[1]}</arg>
+</arguments>
+<msg timestamp="20191027 16:24:26.685" level="INFO">Android 12</msg>
+<status status="PASS" starttime="20191027 16:24:26.685" endtime="20191027 16:24:26.685"></status>
+</kw>
+<status status="PASS" starttime="20191027 16:24:26.682" endtime="20191027 16:24:26.686" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Demo Dictionary">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>username=john</arg>
+<arg>password=welcom1</arg>
+</arguments>
+<assign>
+<var>&amp;{user1}</var>
+</assign>
+<msg timestamp="20191027 16:24:26.688" level="INFO">&amp;{user1} = { username=john | password=welcom1 }</msg>
+<status status="PASS" starttime="20191027 16:24:26.687" endtime="20191027 16:24:26.688"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>username=mary</arg>
+<arg>password=welcom2</arg>
+</arguments>
+<assign>
+<var>&amp;{user2}</var>
+</assign>
+<msg timestamp="20191027 16:24:26.689" level="INFO">&amp;{user2} = { username=mary | password=welcom2 }</msg>
+<status status="PASS" starttime="20191027 16:24:26.688" endtime="20191027 16:24:26.689"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${user1.username}</arg>
+</arguments>
+<msg timestamp="20191027 16:24:26.690" level="INFO">john</msg>
+<status status="PASS" starttime="20191027 16:24:26.689" endtime="20191027 16:24:26.690"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${user2.password}</arg>
+</arguments>
+<msg timestamp="20191027 16:24:26.691" level="INFO">welcom2</msg>
+<status status="PASS" starttime="20191027 16:24:26.691" endtime="20191027 16:24:26.691"></status>
+</kw>
+<status status="PASS" starttime="20191027 16:24:26.687" endtime="20191027 16:24:26.692" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="Demo set keywords">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Hello, world!</arg>
+</arguments>
+<assign>
+<var>${hi}</var>
+</assign>
+<msg timestamp="20191027 16:24:26.694" level="INFO">${hi} = Hello, world!</msg>
+<status status="PASS" starttime="20191027 16:24:26.694" endtime="20191027 16:24:26.694"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>I said:</arg>
+<arg>${hi}</arg>
+</arguments>
+<assign>
+<var>${hi2}</var>
+</assign>
+<msg timestamp="20191027 16:24:26.695" level="INFO">${hi2} = ['I said:', 'Hello, world!']</msg>
+<status status="PASS" starttime="20191027 16:24:26.695" endtime="20191027 16:24:26.695"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Hello world</arg>
+</arguments>
+<assign>
+<var>${var1}</var>
+<var>${var2}</var>
+</assign>
+<msg timestamp="20191027 16:24:26.696" level="FAIL">Cannot set variables: Expected list-like value, got string.</msg>
+<status status="FAIL" starttime="20191027 16:24:26.695" endtime="20191027 16:24:26.696"></status>
+</kw>
+<status status="FAIL" starttime="20191027 16:24:26.693" endtime="20191027 16:24:26.696" critical="yes">Cannot set variables: Expected list-like value, got string.</status>
+</test>
+<status status="FAIL" starttime="20191027 16:24:26.672" endtime="20191027 16:24:26.697"></status>
+</suite>
+<status status="FAIL" starttime="20191027 16:24:26.615" endtime="20191027 16:24:26.700"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1">Critical Tests</stat>
+<stat pass="3" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="1" id="s1" name="Robot Workshop Day1">Robot Workshop Day1</stat>
+<stat pass="3" fail="1" id="s1-s1" name="Demo Variable">Robot Workshop Day1.Demo Variable</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
